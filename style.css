@@ -1,0 +1,123 @@
+/* Custom animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes progress {
+  0% { width: 0%; }
+  to { width: 85%; }
+}
+
+@keyframes slide {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s ease-out;
+}
+
+.animate-progress {
+  animation: progress 2s ease-out forwards;
+}
+
+.animate-slide {
+  animation: slide 0.5s ease-out;
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient 15s ease infinite;
+}
+
+/* Dark mode styles */
+.dark-mode {
+  background: linear-gradient(to bottom, #1f2937, #374151);
+}
+
+.dark-mode nav,
+.dark-mode footer {
+  background: linear-gradient(to right, #1e40af, #6b21a8);
+}
+
+.dark-mode #home {
+  background: linear-gradient(to right, #1e40af, #6b21a8);
+}
+
+.dark-mode #course-filter,
+.dark-mode #features .bg-white,
+.dark-mode #testimonials .bg-white,
+.dark-mode #contact .bg-white,
+.dark-mode #course-modal .bg-white {
+  background: #2d3748;
+  color: #e5e7eb;
+}
+
+.dark-mode #testimonials {
+  background: linear-gradient(to right, #4b5563, #6b7280);
+}
+
+.dark-mode #features p,
+.dark-mode #testimonials p,
+.dark-mode #contact p,
+.dark-mode #course-modal p {
+  color: #d1d5db;
+}
+
+.dark-mode #features h3,
+.dark-mode #testimonials .font-semibold,
+.dark-mode #contact h2,
+.dark-mode #course-modal h2 {
+  color: #f3e8ff;
+}
+
+/* Search results */
+#search-results div:hover {
+  background: #e5e7eb;
+}
+
+.dark-mode #search-results {
+  background: #2d3748;
+}
+
+.dark-mode #search-results div {
+  color: #e5e7eb;
+}
+
+.dark-mode #search-results div:hover {
+  background: #4b5563;
+}
+
+/* Tooltip styles */
+.feature-card:hover .tooltip {
+  display: block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  nav .text-3xl {
+    font-size: 1.5rem;
+  }
+  #home h1 {
+    font-size: 2.5rem;
+  }
+  #search-bar {
+    width: 100%;
+  }
+  #search-results {
+    width: 100%;
+  }
+  .filter-btn {
+    margin-bottom: 0.5rem;
+  }
+  #course-filter {
+    top: 4rem; /* Adjust for smaller navbar */
+  }
+}
